@@ -1,4 +1,5 @@
 ﻿#include <iostream>
+#include <ctime>
 using namespace std;
 
 void first()
@@ -66,11 +67,34 @@ void first()
 
 void second()
 {
-
+    int num, i, a;
+    i = 6;
+    setlocale(LC_ALL, "Rus");
+    srand(time(0)); 
+    num = rand() % 100;
+    system("pause");
+    //cout << num << endl; //вывод загаданного числа
+    cout << "Введите число, осталось попыток 7" << endl;
+    cin >> a;
+    while ((num != a)&&(i>=0)) {//пока число не угадано и количество попыток не истекло
+        if (a > num) {
+            cout << "Число больше загаданного" << endl;
+        }
+        else {
+            cout << "Число меньше загаданного" << endl;
+        }
+        cout << "Вы не угадали, количество попыток " << i << endl;
+        i--;
+        cin >> a;
+    }
+    if (i >= 0) {
+        cout << "Вы угадили число " << num << endl;
+     }
+   
 }
 
 int main()
 {
-    first();
+    second();
     return 0;
 }
