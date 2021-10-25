@@ -72,7 +72,6 @@ void second()
     setlocale(LC_ALL, "Rus");
     srand(time(0)); 
     num = rand() % 100;
-    system("pause");
     //cout << num << endl; //вывод загаданного числа
     cout << "Введите число, осталось попыток 7" << endl;
     cin >> a;
@@ -95,6 +94,15 @@ void second()
 
 int main()
 {
-    second();
+    setlocale(LC_ALL, "Rus");
+    int i;
+    cout << "Введите номер задачи (1 или 2)" << endl;
+    cin >> i;
+    if (i == 1) {
+        first();
+    }
+    else {
+        second();
+    }
     return 0;
 }
