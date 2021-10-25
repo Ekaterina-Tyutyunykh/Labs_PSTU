@@ -69,27 +69,27 @@ void second()
 {
     int num, i, a;
     i = 6;
+    a = -1;
     setlocale(LC_ALL, "Rus");
     srand(time(0)); 
     num = rand() % 100;
     //cout << num << endl; //вывод загаданного числа
-    cout << "Введите число, осталось попыток 7" << endl;
-    cin >> a;
-    while ((num != a)&&(i>=0)) {//пока число не угадано и количество попыток не истекло
+    cout << "Введите число, осталось попыток 6" << endl;
+    while ((num != a) && (i > 0)) {
+        cin >> a;
+        if (a == num) {
+            cout << "Вы угадили число " << num << endl;
+            break;
+        }
         if (a > num) {
             cout << "Число больше загаданного" << endl;
         }
         else {
             cout << "Число меньше загаданного" << endl;
         }
-        cout << "Вы не угадали, количество попыток " << i << endl;
         i--;
-        cin >> a;
+        cout << "Вы не угадали, количество попыток " << i << endl;
     }
-    if (i >= 0) {
-        cout << "Вы угадили число " << num << endl;
-     }
-   
 }
 
 int main()
