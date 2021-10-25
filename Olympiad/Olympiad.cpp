@@ -4,27 +4,23 @@ using namespace std;
 
 void first()
 {
-    int num, f, s, t;
+    int num, f, s, t, x;
     bool flag = false;
     setlocale(LC_ALL, "Rus");
     cout << "Введите трехзначное число" << endl;
     cin >> num;
-    while ((num < 100) || (num > 1000)) {
-        cout << "Введите трехзначное число" << endl;
-        cin >> num;
-    }
     f = num % 10;
-    num = num / 10;
-    s = num % 10;
-    t = num / 10;
+    x = num / 10;
+    s = x % 10;
+    t = x / 10; 
     while (flag == false) {
-        if ((f == s) || (f == t) || (s == t)) {
-            cout << "Цифры в числе не должны повторяться, введите новое число" << endl;
+        if (((f == s) || (f == t) || (s == t))||((num < 100) || (num > 1000))) {
+            cout << "Цифры в числе не должны повторяться, число должно быть трехзначным, введите новое число" << endl;
             cin >> num;
             f = num % 10;
-            num = num / 10;
-            s = num % 10;
-            t = num / 10;
+            x = num / 10;
+            s = x % 10;
+            t = x / 10;
         }
         else {
             flag = true;
