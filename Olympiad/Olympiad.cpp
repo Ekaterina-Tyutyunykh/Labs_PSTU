@@ -28,10 +28,15 @@ void first()
     }
     cout << "Возможные комбинации чисел" << endl;
     cout << f << s << t << endl;
-    cout << s << f << t << endl;
-    cout << t << s << f << endl;
-    cout << f << t << s << endl;
-    cout << s << t << f << endl;
+    swap(s, t);
+    cout << f << s << t << endl;
+    swap(f, s);
+    cout << f << s << t << endl;
+    swap(f, t);
+    cout << f << s << t << endl;
+    swap(s, t);
+    cout << f << s << t << endl;
+    swap(f, s);
     cout << "Максимальное число: ";
     if ((f > s) && (f > t)) {    //первое наибольшее
         if (s > t) { //второе большего третьего
@@ -94,11 +99,17 @@ int main()
     int i;
     cout << "Введите номер задачи (1 или 2)" << endl;
     cin >> i;
-    if (i == 1) {
-        first();
+    if ((i == 1) || (i == 2)) {
+        if (i == 1) {
+            first();
+        }
+        else {
+            second();
+        }
     }
     else {
-        second();
+        cout << "Введите 1 или 2" << endl;
     }
+    
     return 0;
 }
