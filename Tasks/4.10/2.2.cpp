@@ -38,4 +38,5 @@ int main()
     cout << minp;
     cout << ";  Секунды:" << "\t";
     cout << sekp;
+    return 0;
 }
