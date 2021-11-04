@@ -4,7 +4,6 @@ using namespace std;
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
     const int A = 10; // константа (10)
     int B, C, D;
     B = 2 * A;// присваивание (20)
