@@ -1,0 +1,3 @@
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\Debug\Calculator.vcxproj.AssemblyReference.cache
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\Debug\Calculator.MyForm.resources
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\Debug\Calculator.vcxproj.GenerateResource.cache
