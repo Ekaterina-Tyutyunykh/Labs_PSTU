@@ -1,4 +1,4 @@
 ﻿  MyForm.cpp
-C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\MyForm.cpp(9,32): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\MyForm.cpp(9,37): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Calculator.vcxproj -> C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Debug\Calculator.exe
