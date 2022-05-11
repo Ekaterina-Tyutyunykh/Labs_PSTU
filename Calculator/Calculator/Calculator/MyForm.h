@@ -16,6 +16,7 @@ namespace Calculator {
 	using namespace System::Data;
 	using namespace System::Drawing;
 
+
 	/// <summary>
 	/// Сводка для MyForm
 	/// </summary>
@@ -86,6 +87,7 @@ namespace Calculator {
 	private: System::Windows::Forms::Button^ button4;
 	private: System::Windows::Forms::Button^ button3;
 	private: System::Windows::Forms::Label^ label16;
+	private: System::Windows::Forms::Button^ button2;
 
 	protected:
 
@@ -111,6 +113,7 @@ namespace Calculator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -130,6 +133,7 @@ namespace Calculator {
 			this->label11 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
+			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
 			this->label16 = (gcnew System::Windows::Forms::Label());
 			this->button6 = (gcnew System::Windows::Forms::Button());
@@ -285,7 +289,7 @@ namespace Calculator {
 				static_cast<System::Byte>(204)));
 			this->textBox5->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->textBox5->Location = System::Drawing::Point(229, 135);
-			this->textBox5->MaxLength = 3;
+			this->textBox5->MaxLength = 4;
 			this->textBox5->Name = L"textBox5";
 			this->textBox5->Size = System::Drawing::Size(55, 49);
 			this->textBox5->TabIndex = 15;
@@ -350,7 +354,9 @@ namespace Calculator {
 			// 
 			this->tabControl1->Controls->Add(this->tabPage1);
 			this->tabControl1->Controls->Add(this->tabPage2);
-			this->tabControl1->Location = System::Drawing::Point(3, 12);
+			this->tabControl1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->tabControl1->Location = System::Drawing::Point(49, 39);
 			this->tabControl1->Name = L"tabControl1";
 			this->tabControl1->SelectedIndex = 0;
 			this->tabControl1->Size = System::Drawing::Size(655, 513);
@@ -358,6 +364,7 @@ namespace Calculator {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->Controls->Add(this->button2);
 			this->tabPage1->Controls->Add(this->textBox2);
 			this->tabPage1->Controls->Add(this->label11);
 			this->tabPage1->Controls->Add(this->label10);
@@ -375,13 +382,23 @@ namespace Calculator {
 			this->tabPage1->Controls->Add(this->label8);
 			this->tabPage1->Controls->Add(this->label2);
 			this->tabPage1->Controls->Add(this->label7);
-			this->tabPage1->Location = System::Drawing::Point(4, 25);
+			this->tabPage1->Location = System::Drawing::Point(4, 34);
 			this->tabPage1->Name = L"tabPage1";
 			this->tabPage1->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage1->Size = System::Drawing::Size(647, 484);
+			this->tabPage1->Size = System::Drawing::Size(647, 475);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Вычисление логарифма";
 			this->tabPage1->UseVisualStyleBackColor = true;
+			// 
+			// button2
+			// 
+			this->button2->Location = System::Drawing::Point(589, 15);
+			this->button2->Name = L"button2";
+			this->button2->Size = System::Drawing::Size(40, 37);
+			this->button2->TabIndex = 21;
+			this->button2->Text = L"\?";
+			this->button2->UseVisualStyleBackColor = true;
+			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// tabPage2
 			// 
@@ -402,10 +419,10 @@ namespace Calculator {
 			this->tabPage2->Controls->Add(this->textBox10);
 			this->tabPage2->Controls->Add(this->label13);
 			this->tabPage2->Controls->Add(this->label14);
-			this->tabPage2->Location = System::Drawing::Point(4, 25);
+			this->tabPage2->Location = System::Drawing::Point(4, 34);
 			this->tabPage2->Name = L"tabPage2";
 			this->tabPage2->Padding = System::Windows::Forms::Padding(3);
-			this->tabPage2->Size = System::Drawing::Size(647, 484);
+			this->tabPage2->Size = System::Drawing::Size(647, 475);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Действия над логарифмами";
 			this->tabPage2->UseVisualStyleBackColor = true;
@@ -499,7 +516,7 @@ namespace Calculator {
 				static_cast<System::Byte>(204)));
 			this->textBox11->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->textBox11->Location = System::Drawing::Point(450, 98);
-			this->textBox11->MaxLength = 3;
+			this->textBox11->MaxLength = 4;
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(37, 34);
 			this->textBox11->TabIndex = 27;
@@ -559,7 +576,7 @@ namespace Calculator {
 				static_cast<System::Byte>(204)));
 			this->textBox7->ImeMode = System::Windows::Forms::ImeMode::NoControl;
 			this->textBox7->Location = System::Drawing::Point(123, 86);
-			this->textBox7->MaxLength = 3;
+			this->textBox7->MaxLength = 4;
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(37, 34);
 			this->textBox7->TabIndex = 22;
@@ -617,12 +634,13 @@ namespace Calculator {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::HighlightText;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
-			this->ClientSize = System::Drawing::Size(660, 524);
+			this->ClientSize = System::Drawing::Size(786, 605);
 			this->Controls->Add(this->tabControl1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
 			this->Name = L"MyForm";
-			this->Text = L"Калькулятор логарифмов";
+			this->Text = L"Интер@ктивный калькулятор логарифмов";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
@@ -638,6 +656,7 @@ namespace Calculator {
 		double base, degree, cof, result, term; // 8 9 10 6 7     11-предупреждение
 		double base1=1, degree1=1, cof1=1, result1=1, term1=1;
 		int counter = 0;
+		label11->Text = "";
 		this->label2->Text = L"log";
 		this->label4->Text = L"=";
 		//cof = System::Double::Parse(this->textBox1->Text); //коэффицент
@@ -675,10 +694,16 @@ namespace Calculator {
 				label8->Text = "";
 			}
 			else label8->Text = base.ToString();
+			if (base == 2,71) {
+				label2->Text = "ln";
+				label8->Text = "";
+			}
+			else label8->Text = base.ToString();
 		}
 		
 		if (counter != 4) {
 			label11->Text = "Неверный ввод";
+			counter = 0;
 		}
 		else {
 			if (textBox3->Text == "") { // результат
@@ -720,6 +745,11 @@ namespace Calculator {
 					label2->Text = "lg";
 					label8->Text = "";
 				}else label8->Text = base1.ToString();
+				if (base1 == 2,7) {
+					label2->Text = "ln";
+					label8->Text = "";
+				}
+				else label8->Text = base1.ToString();
 			}
 
 			
@@ -1134,6 +1164,13 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	}
 }
 private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e) {
+}
+private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+	
+	
+		MessageBox::Show("exp = 2,71 \nдробное число записывается через ',' ", "Подсказка",
+			MessageBoxButtons::OK, MessageBoxIcon::Information);
+
 }
 };
 };
