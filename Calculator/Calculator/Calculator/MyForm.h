@@ -67,8 +67,8 @@ namespace Calculator {
 	private: System::Windows::Forms::TabControl^ tabControl1;
 	private: System::Windows::Forms::TabPage^ tabPage1;
 	private: System::Windows::Forms::TabPage^ tabPage2;
-	private: System::Windows::Forms::ComboBox^ comboBox1;
-	private: System::Windows::Forms::Button^ button2;
+
+
 	private: System::Windows::Forms::TextBox^ textBox9;
 	private: System::Windows::Forms::TextBox^ textBox11;
 	private: System::Windows::Forms::TextBox^ textBox12;
@@ -81,6 +81,11 @@ namespace Calculator {
 	private: System::Windows::Forms::Label^ label13;
 	private: System::Windows::Forms::Label^ label14;
 	private: System::Windows::Forms::Label^ label15;
+	private: System::Windows::Forms::Button^ button6;
+	private: System::Windows::Forms::Button^ button5;
+	private: System::Windows::Forms::Button^ button4;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Label^ label16;
 
 	protected:
 
@@ -126,6 +131,12 @@ namespace Calculator {
 			this->tabControl1 = (gcnew System::Windows::Forms::TabControl());
 			this->tabPage1 = (gcnew System::Windows::Forms::TabPage());
 			this->tabPage2 = (gcnew System::Windows::Forms::TabPage());
+			this->label16 = (gcnew System::Windows::Forms::Label());
+			this->button6 = (gcnew System::Windows::Forms::Button());
+			this->button5 = (gcnew System::Windows::Forms::Button());
+			this->button4 = (gcnew System::Windows::Forms::Button());
+			this->button3 = (gcnew System::Windows::Forms::Button());
+			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->textBox9 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox11 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox12 = (gcnew System::Windows::Forms::TextBox());
@@ -135,11 +146,8 @@ namespace Calculator {
 			this->textBox7 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox8 = (gcnew System::Windows::Forms::TextBox());
 			this->textBox10 = (gcnew System::Windows::Forms::TextBox());
-			this->button2 = (gcnew System::Windows::Forms::Button());
-			this->comboBox1 = (gcnew System::Windows::Forms::ComboBox());
 			this->label13 = (gcnew System::Windows::Forms::Label());
 			this->label14 = (gcnew System::Windows::Forms::Label());
-			this->label15 = (gcnew System::Windows::Forms::Label());
 			this->tabControl1->SuspendLayout();
 			this->tabPage1->SuspendLayout();
 			this->tabPage2->SuspendLayout();
@@ -377,6 +385,11 @@ namespace Calculator {
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->Controls->Add(this->label16);
+			this->tabPage2->Controls->Add(this->button6);
+			this->tabPage2->Controls->Add(this->button5);
+			this->tabPage2->Controls->Add(this->button4);
+			this->tabPage2->Controls->Add(this->button3);
 			this->tabPage2->Controls->Add(this->label15);
 			this->tabPage2->Controls->Add(this->textBox9);
 			this->tabPage2->Controls->Add(this->textBox11);
@@ -387,8 +400,6 @@ namespace Calculator {
 			this->tabPage2->Controls->Add(this->textBox7);
 			this->tabPage2->Controls->Add(this->textBox8);
 			this->tabPage2->Controls->Add(this->textBox10);
-			this->tabPage2->Controls->Add(this->button2);
-			this->tabPage2->Controls->Add(this->comboBox1);
 			this->tabPage2->Controls->Add(this->label13);
 			this->tabPage2->Controls->Add(this->label14);
 			this->tabPage2->Location = System::Drawing::Point(4, 25);
@@ -398,6 +409,77 @@ namespace Calculator {
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Действия над логарифмами";
 			this->tabPage2->UseVisualStyleBackColor = true;
+			// 
+			// label16
+			// 
+			this->label16->AutoSize = true;
+			this->label16->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label16->Location = System::Drawing::Point(124, 202);
+			this->label16->Name = L"label16";
+			this->label16->Size = System::Drawing::Size(65, 69);
+			this->label16->TabIndex = 34;
+			this->label16->Text = L"=";
+			// 
+			// button6
+			// 
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button6->Location = System::Drawing::Point(289, 97);
+			this->button6->Name = L"button6";
+			this->button6->Size = System::Drawing::Size(38, 35);
+			this->button6->TabIndex = 33;
+			this->button6->Text = L"/";
+			this->button6->UseVisualStyleBackColor = true;
+			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
+			// 
+			// button5
+			// 
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button5->Location = System::Drawing::Point(249, 97);
+			this->button5->Name = L"button5";
+			this->button5->Size = System::Drawing::Size(38, 35);
+			this->button5->TabIndex = 32;
+			this->button5->Text = L"*";
+			this->button5->UseVisualStyleBackColor = true;
+			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
+			// 
+			// button4
+			// 
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button4->Location = System::Drawing::Point(289, 57);
+			this->button4->Name = L"button4";
+			this->button4->Size = System::Drawing::Size(38, 35);
+			this->button4->TabIndex = 31;
+			this->button4->Text = L"-";
+			this->button4->UseVisualStyleBackColor = true;
+			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
+			// 
+			// button3
+			// 
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button3->Location = System::Drawing::Point(249, 57);
+			this->button3->Name = L"button3";
+			this->button3->Size = System::Drawing::Size(38, 35);
+			this->button3->TabIndex = 30;
+			this->button3->Text = L"+";
+			this->button3->UseVisualStyleBackColor = true;
+			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
+			// 
+			// label15
+			// 
+			this->label15->AutoSize = true;
+			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label15->Location = System::Drawing::Point(195, 218);
+			this->label15->Name = L"label15";
+			this->label15->Size = System::Drawing::Size(30, 44);
+			this->label15->TabIndex = 29;
+			this->label15->Text = L" ";
+			this->label15->Click += gcnew System::EventHandler(this, &MyForm::label15_Click);
 			// 
 			// textBox9
 			// 
@@ -409,17 +491,19 @@ namespace Calculator {
 			this->textBox9->Name = L"textBox9";
 			this->textBox9->Size = System::Drawing::Size(59, 49);
 			this->textBox9->TabIndex = 24;
+			this->textBox9->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox9_KeyPress);
 			// 
 			// textBox11
 			// 
 			this->textBox11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->textBox11->ImeMode = System::Windows::Forms::ImeMode::NoControl;
-			this->textBox11->Location = System::Drawing::Point(450, 97);
+			this->textBox11->Location = System::Drawing::Point(450, 98);
 			this->textBox11->MaxLength = 3;
 			this->textBox11->Name = L"textBox11";
 			this->textBox11->Size = System::Drawing::Size(37, 34);
 			this->textBox11->TabIndex = 27;
+			this->textBox11->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox11_KeyPress);
 			// 
 			// textBox12
 			// 
@@ -431,6 +515,7 @@ namespace Calculator {
 			this->textBox12->Name = L"textBox12";
 			this->textBox12->Size = System::Drawing::Size(37, 34);
 			this->textBox12->TabIndex = 26;
+			this->textBox12->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox12_KeyPress);
 			// 
 			// textBox13
 			// 
@@ -443,6 +528,7 @@ namespace Calculator {
 			this->textBox13->Size = System::Drawing::Size(57, 49);
 			this->textBox13->TabIndex = 25;
 			this->textBox13->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
+			this->textBox13->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox13_KeyPress);
 			// 
 			// label12
 			// 
@@ -465,6 +551,7 @@ namespace Calculator {
 			this->textBox6->Name = L"textBox6";
 			this->textBox6->Size = System::Drawing::Size(59, 49);
 			this->textBox6->TabIndex = 17;
+			this->textBox6->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox6_KeyPress);
 			// 
 			// textBox7
 			// 
@@ -476,6 +563,7 @@ namespace Calculator {
 			this->textBox7->Name = L"textBox7";
 			this->textBox7->Size = System::Drawing::Size(37, 34);
 			this->textBox7->TabIndex = 22;
+			this->textBox7->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox7_KeyPress);
 			// 
 			// textBox8
 			// 
@@ -487,6 +575,7 @@ namespace Calculator {
 			this->textBox8->Name = L"textBox8";
 			this->textBox8->Size = System::Drawing::Size(37, 34);
 			this->textBox8->TabIndex = 21;
+			this->textBox8->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox8_KeyPress);
 			// 
 			// textBox10
 			// 
@@ -499,31 +588,7 @@ namespace Calculator {
 			this->textBox10->Size = System::Drawing::Size(57, 49);
 			this->textBox10->TabIndex = 19;
 			this->textBox10->TextAlign = System::Windows::Forms::HorizontalAlignment::Right;
-			// 
-			// button2
-			// 
-			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->button2->Location = System::Drawing::Point(166, 162);
-			this->button2->Name = L"button2";
-			this->button2->Size = System::Drawing::Size(271, 46);
-			this->button2->TabIndex = 1;
-			this->button2->Text = L"Вычислить";
-			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-			// 
-			// comboBox1
-			// 
-			this->comboBox1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->comboBox1->FormattingEnabled = true;
-			this->comboBox1->Items->AddRange(gcnew cli::array< System::Object^  >(4) { L"+", L"-", L"*", L"/" });
-			
-			this->comboBox1->Location = System::Drawing::Point(259, 50);
-			this->comboBox1->Name = L"comboBox1";
-			this->comboBox1->Size = System::Drawing::Size(63, 50);
-			this->comboBox1->TabIndex = 0;
-			this->comboBox1->SelectedIndexChanged += gcnew System::EventHandler(this, &MyForm::comboBox1_SelectedIndexChanged);
+			this->textBox10->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &MyForm::textBox10_KeyPress);
 			// 
 			// label13
 			// 
@@ -546,17 +611,6 @@ namespace Calculator {
 			this->label14->Size = System::Drawing::Size(65, 69);
 			this->label14->TabIndex = 28;
 			this->label14->Text = L"=";
-			// 
-			// label15
-			// 
-			this->label15->AutoSize = true;
-			this->label15->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
-				static_cast<System::Byte>(204)));
-			this->label15->Location = System::Drawing::Point(273, 232);
-			this->label15->Name = L"label15";
-			this->label15->Size = System::Drawing::Size(65, 69);
-			this->label15->TabIndex = 29;
-			this->label15->Text = L"=";
 			// 
 			// MyForm
 			// 
@@ -699,9 +753,9 @@ namespace Calculator {
 
 	private: System::Void textBox2_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		// Only allow 1 decimal point
-		if (e->KeyChar == '.')
+		if (e->KeyChar == ',')
 		{
-			if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
+			if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
 				e->Handled = true;
 		}
 		// Accept only digits "." and the Backspace character
@@ -710,9 +764,10 @@ namespace Calculator {
 	}
 	private: System::Void textBox1_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 		// Only allow 1 decimal point
-		if (e->KeyChar == '.')
+		
+		if (e->KeyChar == ',')
 		{
-			if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
+			if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
 				e->Handled = true;
 		}
 		// Accept only digits "." and the Backspace character
@@ -721,9 +776,9 @@ namespace Calculator {
 	}
 	private: System::Void textBox5_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	// Only allow 1 decimal point
-	if (e->KeyChar == '.')
+	if (e->KeyChar == ',')
 	{
-		if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
 			e->Handled = true;
 	}
 	// Accept only digits "." and the Backspace character
@@ -732,9 +787,9 @@ namespace Calculator {
 }
 	private: System::Void textBox4_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	// Only allow 1 decimal point
-	if (e->KeyChar == '.')
+	if (e->KeyChar == ',')
 	{
-		if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
 			e->Handled = true;
 	}
 	// Accept only digits "." and the Backspace character
@@ -748,6 +803,11 @@ namespace Calculator {
 		if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
 			e->Handled = true;
 	}
+	/*if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}*/
 	// Accept only digits "." and the Backspace character
 	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
 		e->Handled = true;
@@ -756,20 +816,324 @@ private: System::Void textBox3_TextChanged(System::Object^ sender, System::Event
 }
 private: System::Void textBox2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 }
-private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
+
+
+
+
+private: System::Void textBox10_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	// Only allow 1 decimal point
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox7_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	// Only allow 1 decimal point
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox6_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	// Only allow 1 decimal point
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+
+private: System::Void textBox8_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox13_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox11_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox9_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void textBox12_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == ',')
+	{
+		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
+			e->Handled = true;
+	}
+	// Accept only digits "." and the Backspace character
+	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
+		e->Handled = true;
+}
+private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
+	double base, degree, cof, result, term; 
+	double base1 , degree1 , cof1 , result1 , term1;
+	int counter = 0;
+	int counter1 = 0;
+	if (!(textBox10->Text == "")) {
+		cof = System::Double::Parse(this->textBox10->Text); 
+		++counter;
+	}
+	if (!(textBox7->Text == "")) {
+		base = System::Double::Parse(this->textBox7->Text); 
+		++counter;
+	}
+	if (!(textBox6->Text == "")) {
+		term = System::Double::Parse(this->textBox6->Text);
+		++counter;
+	}
+	if (!(textBox8->Text == "")) {
+		degree = System::Double::Parse(this->textBox8->Text);
+		++counter;
+	}
+
+	if (!(textBox13->Text == "")) {
+		cof1 = System::Double::Parse(this->textBox13->Text); 
+		++counter1;
+	}
+	if (!(textBox11->Text == "")) {
+		base1 = System::Double::Parse(this->textBox11->Text);  //лог выражение
+		++counter1;
+	}
+	if (!(textBox9->Text == "")) {
+		term1 = System::Double::Parse(this->textBox9->Text);// результат
+		++counter1;
+	}
+	if (!(textBox12->Text == "")) {
+		degree1 = System::Double::Parse(this->textBox12->Text);//степень
+		++counter1;
+	}
+	if (counter1 != 4||counter!=4) {
+		label15->Text = "Неверный ввод";
+		counter1 = 0;
+		counter = 0;
+	}
+	else {
+		degree = degree * cof;
+		term = pow(term, degree);
+		result = logar(term1, base);
+		result = round(result * 10) / 10;
+		degree1 = degree1 * cof1;
+		term1 = pow(term1, degree1);
+		result1 = logar(term1, base1);
+		result1 = round(result1 * 10) / 10;
+		//result1 = round(result1 * 10) / 10;
+		label15->Text = (round((result + result1)*10)/10).ToString();
+	}
+
+
+
 	
-	
-	
-
-
-
-
-
 
 }
-private: System::Void comboBox1_SelectedIndexChanged(System::Object^ sender, System::EventArgs^ e) {
-	/*int den = (int)comboBox1->SelectedValue;
-	label15->Text = den.ToString();*/
+private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e) {
+	double base, degree, cof, result, term;
+	double base1, degree1, cof1, result1, term1;
+	int counter = 0;
+	int counter1 = 0;
+	if (!(textBox10->Text == "")) {
+		cof = System::Double::Parse(this->textBox10->Text);
+		++counter;
+	}
+	if (!(textBox7->Text == "")) {
+		base = System::Double::Parse(this->textBox7->Text);
+		++counter;
+	}
+	if (!(textBox6->Text == "")) {
+		term = System::Double::Parse(this->textBox6->Text);
+		++counter;
+	}
+	if (!(textBox8->Text == "")) {
+		degree = System::Double::Parse(this->textBox8->Text);
+		++counter;
+	}
+
+	if (!(textBox13->Text == "")) {
+		cof1 = System::Double::Parse(this->textBox13->Text);
+		++counter1;
+	}
+	if (!(textBox11->Text == "")) {
+		base1 = System::Double::Parse(this->textBox11->Text);  //лог выражение
+		++counter1;
+	}
+	if (!(textBox9->Text == "")) {
+		term1 = System::Double::Parse(this->textBox9->Text);// результат
+		++counter1;
+	}
+	if (!(textBox12->Text == "")) {
+		degree1 = System::Double::Parse(this->textBox12->Text);//степень
+		++counter1;
+	}
+	if (counter1 != 4 || counter != 4) {
+		label15->Text = "Неверный ввод";
+		counter1 = 0;
+		counter = 0;
+	}
+	else {
+		degree = degree * cof;
+		term = pow(term, degree);
+		result = logar(term1, base);
+		result = round(result * 10) / 10;
+		degree1 = degree1 * cof1;
+		term1 = pow(term1, degree1);
+		result1 = logar(term1, base1);
+		result1 = round(result1 * 10) / 10;
+
+		label15->Text = (round((result - result1) * 10) / 10).ToString();
+	}
+}
+private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
+	double base, degree, cof, result, term;
+	double base1, degree1, cof1, result1, term1;
+	int counter = 0;
+	int counter1 = 0;
+	if (!(textBox10->Text == "")) {
+		cof = System::Double::Parse(this->textBox10->Text);
+		++counter;
+	}
+	if (!(textBox7->Text == "")) {
+		base = System::Double::Parse(this->textBox7->Text);
+		++counter;
+	}
+	if (!(textBox6->Text == "")) {
+		term = System::Double::Parse(this->textBox6->Text);
+		++counter;
+	}
+	if (!(textBox8->Text == "")) {
+		degree = System::Double::Parse(this->textBox8->Text);
+		++counter;
+	}
+
+	if (!(textBox13->Text == "")) {
+		cof1 = System::Double::Parse(this->textBox13->Text);
+		++counter1;
+	}
+	if (!(textBox11->Text == "")) {
+		base1 = System::Double::Parse(this->textBox11->Text);  //лог выражение
+		++counter1;
+	}
+	if (!(textBox9->Text == "")) {
+		term1 = System::Double::Parse(this->textBox9->Text);// результат
+		++counter1;
+	}
+	if (!(textBox12->Text == "")) {
+		degree1 = System::Double::Parse(this->textBox12->Text);//степень
+		++counter1;
+	}
+	if (counter1 != 4 || counter != 4) {
+		label15->Text = "Неверный ввод";
+		counter1 = 0;
+		counter = 0;
+	}
+	else {
+		degree = degree * cof;
+		term = pow(term, degree);
+		result = logar(term1, base);
+		result = round(result * 10) / 10;
+		degree1 = degree1 * cof1;
+		term1 = pow(term1, degree1);
+		result1 = logar(term1, base1);
+		result1 = round(result1 * 10) / 10;
+
+		label15->Text = (round((result * result1) * 10) / 10).ToString();
+	}
+}
+private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
+	double base, degree, cof, result, term;
+	double base1, degree1, cof1, result1, term1;
+	int counter = 0;
+	int counter1 = 0;
+	if (!(textBox10->Text == "")) {
+		cof = System::Double::Parse(this->textBox10->Text);
+		++counter;
+	}
+	if (!(textBox7->Text == "")) {
+		base = System::Double::Parse(this->textBox7->Text);
+		++counter;
+	}
+	if (!(textBox6->Text == "")) {
+		term = System::Double::Parse(this->textBox6->Text);
+		++counter;
+	}
+	if (!(textBox8->Text == "")) {
+		degree = System::Double::Parse(this->textBox8->Text);
+		++counter;
+	}
+
+	if (!(textBox13->Text == "")) {
+		cof1 = System::Double::Parse(this->textBox13->Text);
+		++counter1;
+	}
+	if (!(textBox11->Text == "")) {
+		base1 = System::Double::Parse(this->textBox11->Text);  //лог выражение
+		++counter1;
+	}
+	if (!(textBox9->Text == "")) {
+		term1 = System::Double::Parse(this->textBox9->Text);// результат
+		++counter1;
+	}
+	if (!(textBox12->Text == "")) {
+		degree1 = System::Double::Parse(this->textBox12->Text);//степень
+		++counter1;
+	}
+	if (counter1 != 4 || counter != 4) {
+		label15->Text = "Неверный ввод";
+		counter1 = 0;
+		counter = 0;
+	}
+	else {
+		degree = degree * cof;
+		term = pow(term, degree);
+		result = logar(term1, base);
+		result = round(result * 10) / 10;
+		degree1 = degree1 * cof1;
+		term1 = pow(term1, degree1);
+		result1 = logar(term1, base1);
+		result1 = round(result1 * 10) / 10;
+
+		label15->Text = (round((result / result1) * 10) / 10).ToString();
+	}
+}
+private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e) {
 }
 };
 };
