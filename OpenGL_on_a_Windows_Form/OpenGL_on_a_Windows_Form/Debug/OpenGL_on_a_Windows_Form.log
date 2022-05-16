@@ -1,0 +1,8 @@
+﻿cl : командная строка warning D9035: использование параметра "clr:pure" нежелательно, он будет удален в следующих выпусках
+  OpenGL_on_a_Windows_Form.cpp
+C:\Users\User\Desktop\OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form.cpp(3,1): warning C4005: __CLR_VER: изменение макроопределения
+C:\Users\User\Desktop\OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form\stdafx.cpp : message : см. предыдущее определение "__CLR_VER"
+C:\Users\User\Desktop\OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form.cpp(3,1): warning C4651: параметр "/D__CLR_VER=40804470" указан для предкомпилированного заголовка, но не для текущей компиляции
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\yvals.h(245): warning STL4001: /clr:pure is deprecated and will be REMOVED.
+  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  OpenGL_on_a_Windows_Form.vcxproj -> C:\Users\User\Desktop\OpenGL_on_a_Windows_Form\Debug\OpenGL_on_a_Windows_Form.exe

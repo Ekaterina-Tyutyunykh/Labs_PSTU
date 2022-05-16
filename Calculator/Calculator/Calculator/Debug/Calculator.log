@@ -1,7 +1,4 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: Свойству "IntermediateOutputPath" в первый раз присваивается значение, но оно уже было использовано в "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(30,5): warning MSB4211: Свойству "DebugType" в первый раз присваивается значение, но оно уже было использовано в "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (29,5)".
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(372,5): warning MSB4211: Свойству "CleanFile" в первый раз присваивается значение, но оно уже было использовано в "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
-  MyForm.cpp
+﻿  MyForm.cpp
 C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Calculator\MyForm.cpp(9,37): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
   MyForm.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
   Calculator.vcxproj -> C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Calculator\Calculator\Debug\Calculator.exe

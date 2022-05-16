@@ -15,6 +15,8 @@ namespace Calculator {
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
 	using namespace System::Drawing;
+	//using namespace System::Math;
+	
 
 
 	/// <summary>
@@ -113,7 +115,6 @@ namespace Calculator {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
@@ -235,14 +236,17 @@ namespace Calculator {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
 			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 22.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->button1->ForeColor = System::Drawing::Color::Black;
 			this->button1->Location = System::Drawing::Point(179, 200);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(315, 51);
 			this->button1->TabIndex = 11;
 			this->button1->Text = L"Вычислить";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click_1);
 			// 
 			// textBox1
@@ -344,7 +348,7 @@ namespace Calculator {
 			this->label11->AutoSize = true;
 			this->label11->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 36, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label11->Location = System::Drawing::Point(99, 409);
+			this->label11->Location = System::Drawing::Point(90, 391);
 			this->label11->Name = L"label11";
 			this->label11->Size = System::Drawing::Size(46, 69);
 			this->label11->TabIndex = 20;
@@ -364,6 +368,8 @@ namespace Calculator {
 			// 
 			// tabPage1
 			// 
+			this->tabPage1->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(130)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(188)));
 			this->tabPage1->Controls->Add(this->button2);
 			this->tabPage1->Controls->Add(this->textBox2);
 			this->tabPage1->Controls->Add(this->label11);
@@ -388,20 +394,23 @@ namespace Calculator {
 			this->tabPage1->Size = System::Drawing::Size(647, 475);
 			this->tabPage1->TabIndex = 0;
 			this->tabPage1->Text = L"Вычисление логарифма";
-			this->tabPage1->UseVisualStyleBackColor = true;
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
 			this->button2->Location = System::Drawing::Point(589, 15);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(40, 37);
 			this->button2->TabIndex = 21;
 			this->button2->Text = L"\?";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// tabPage2
 			// 
+			this->tabPage2->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(130)), static_cast<System::Int32>(static_cast<System::Byte>(160)),
+				static_cast<System::Int32>(static_cast<System::Byte>(188)));
 			this->tabPage2->Controls->Add(this->label16);
 			this->tabPage2->Controls->Add(this->button6);
 			this->tabPage2->Controls->Add(this->button5);
@@ -425,7 +434,6 @@ namespace Calculator {
 			this->tabPage2->Size = System::Drawing::Size(647, 475);
 			this->tabPage2->TabIndex = 1;
 			this->tabPage2->Text = L"Действия над логарифмами";
-			this->tabPage2->UseVisualStyleBackColor = true;
 			// 
 			// label16
 			// 
@@ -434,56 +442,63 @@ namespace Calculator {
 				static_cast<System::Byte>(204)));
 			this->label16->Location = System::Drawing::Point(124, 202);
 			this->label16->Name = L"label16";
-			this->label16->Size = System::Drawing::Size(65, 69);
+			this->label16->Size = System::Drawing::Size(0, 69);
 			this->label16->TabIndex = 34;
-			this->label16->Text = L"=";
 			// 
 			// button6
 			// 
-			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button6->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
+			this->button6->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button6->Location = System::Drawing::Point(289, 97);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(38, 35);
 			this->button6->TabIndex = 33;
 			this->button6->Text = L"/";
-			this->button6->UseVisualStyleBackColor = true;
+			this->button6->UseVisualStyleBackColor = false;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
 			// 
 			// button5
 			// 
-			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button5->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
+			this->button5->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button5->Location = System::Drawing::Point(249, 97);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(38, 35);
 			this->button5->TabIndex = 32;
 			this->button5->Text = L"*";
-			this->button5->UseVisualStyleBackColor = true;
+			this->button5->UseVisualStyleBackColor = false;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
 			// 
 			// button4
 			// 
-			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button4->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button4->Location = System::Drawing::Point(289, 57);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(38, 35);
 			this->button4->TabIndex = 31;
 			this->button4->Text = L"-";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// button3
 			// 
-			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->button3->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(167)), static_cast<System::Int32>(static_cast<System::Byte>(204)),
+				static_cast<System::Int32>(static_cast<System::Byte>(237)));
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 16.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->button3->Location = System::Drawing::Point(249, 57);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(38, 35);
 			this->button3->TabIndex = 30;
 			this->button3->Text = L"+";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// label15
@@ -633,14 +648,16 @@ namespace Calculator {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackColor = System::Drawing::SystemColors::HighlightText;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(48)), static_cast<System::Int32>(static_cast<System::Byte>(77)),
+				static_cast<System::Int32>(static_cast<System::Byte>(109)));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Center;
 			this->ClientSize = System::Drawing::Size(786, 605);
 			this->Controls->Add(this->tabControl1);
 			this->ForeColor = System::Drawing::SystemColors::ControlText;
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
+			this->MaximizeBox = false;
 			this->Name = L"MyForm";
-			this->Text = L"Интер@ктивный калькулятор логарифмов";
+			this->Text = L"Калькулятор логарифмов";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			this->tabControl1->ResumeLayout(false);
 			this->tabPage1->ResumeLayout(false);
@@ -659,12 +676,7 @@ namespace Calculator {
 		label11->Text = "";
 		this->label2->Text = L"log";
 		this->label4->Text = L"=";
-		//cof = System::Double::Parse(this->textBox1->Text); //коэффицент
-		//term = System::Double::Parse(this->textBox2->Text);  //лог выражение
-		//result  = System::Double::Parse(this->textBox3->Text);// результат
-		//degree = System::Double::Parse(this->textBox4->Text);//степень
-		//base = System::Double::Parse(this->textBox5->Text);//основание
-
+		
 		if (!(textBox1->Text == "")){
 			cof = System::Double::Parse(this->textBox1->Text); //коэффицент
 			++counter;
@@ -689,50 +701,56 @@ namespace Calculator {
 			base = System::Double::Parse(this->textBox5->Text);//основание
 			++counter;
 			
-			if (base == 10) {
+			if (base == 10.0||base1==10.0) {
 				label2->Text = "lg";
 				label8->Text = "";
 			}
-			else label8->Text = base.ToString();
-			if (base == 2,71) {
-				label2->Text = "ln";
-				label8->Text = "";
+			else {
+
+				if (base == 2.7||base1==2.7) {
+					label2->Text = "ln";
+					label8->Text = "";
+				}
+				else label8->Text = base.ToString();
+
 			}
-			else label8->Text = base.ToString();
+
+
 		}
 		
 		if (counter != 4) {
 			label11->Text = "Неверный ввод";
 			counter = 0;
 		}
+
 		else {
 			if (textBox3->Text == "") { // результат
 				degree1 = degree * cof;
 				term1 = pow(term,degree1);
 				result1 = logar(term1, base);
 				result1 = round(result1 * 10) / 10;
-				label6->Text = result1.ToString();
+				label6->Text = ToString()->Format("{0:0.##}", (result1));
 			}
 			if (textBox1->Text == "") { // коэфиценте перед лог
 				term1 = pow(base, result);
 				degree1 = logar(term1, base);
 				cof1 = degree1 / degree;
 				cof1 = round(cof1 * 10) / 10;
-				label10->Text = cof1.ToString();
+				label10->Text = ToString()->Format("{0:0.##}", (cof1));
 			}
 			if (textBox2->Text == "") { // лог выражение
 				degree1 = cof * degree;
 				term1 = pow(base, result);
 				term1 = pow(term1, 1.0 / degree1);
 				term1 = round(term1 * 10) / 10;
-				label7->Text = term1.ToString();
+				label7->Text = ToString()->Format("{0:0.##}", (term1));
 			}
 			if (textBox4->Text == "") { //степень
 				term1 = pow(base, result);
 				degree1 = logar(term1, term);
 				degree1 = degree1 / cof;
 				degree1 = round(degree1 * 10) / 10;
-				label9->Text = degree1.ToString();
+				label9->Text = ToString()->Format("{0:0.##}", (degree1));
 			}
 			if (textBox5->Text == "") { //основание
 				degree1 = degree * cof;
@@ -741,23 +759,23 @@ namespace Calculator {
 				base1 = round(base1 * 10) / 10;
 				
 
-				if (base1 == 10) {
+				if (base1 == 10.0|| base == 10.0) {
 					label2->Text = "lg";
 					label8->Text = "";
-				}else label8->Text = base1.ToString();
-				if (base1 == 2,7) {
-					label2->Text = "ln";
-					label8->Text = "";
 				}
-				else label8->Text = base1.ToString();
+				else {
+
+					if (base1 == 2.7|| base == 2.7) {
+						label2->Text = "ln";
+						label8->Text = "";
+					}
+					else label8->Text = ToString()->Format("{0:0.##}", (base1));
+				}
 			}
 
 			
 		}
 
-
-		/*this->label2->Location = System::Drawing::Point(123, 292);*/
-		/*label2->Location->X = 6 + label10->Weight;*/
 		int p = this-> label10->Width;
 		this->label2->Location = System::Drawing::Point(p, 232);
 		int c = this->label2->Width;
@@ -833,12 +851,7 @@ namespace Calculator {
 		if (this->textBox2->Text->Contains(".") && !this->textBox2->SelectedText->Contains("."))
 			e->Handled = true;
 	}
-	/*if (e->KeyChar == ',')
-	{
-		if (this->textBox2->Text->Contains(",") && !this->textBox2->SelectedText->Contains(","))
-			e->Handled = true;
-	}*/
-	// Accept only digits "." and the Backspace character
+	
 	else if (!Char::IsDigit(e->KeyChar) && e->KeyChar != 0x08)
 		e->Handled = true;
 }
@@ -980,14 +993,15 @@ private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e
 	else {
 		degree = degree * cof;
 		term = pow(term, degree);
-		result = logar(term1, base);
-		result = round(result * 10) / 10;
+		result = logar(term, base);
+		
 		degree1 = degree1 * cof1;
 		term1 = pow(term1, degree1);
 		result1 = logar(term1, base1);
 		result1 = round(result1 * 10) / 10;
-		//result1 = round(result1 * 10) / 10;
-		label15->Text = (round((result + result1)*10)/10).ToString();
+		
+		label15->Text = "= ";
+		label15->Text += ToString()->Format("{0:0.##}", (result + result1));
 	}
 
 
@@ -1041,14 +1055,14 @@ private: System::Void button4_Click(System::Object^ sender, System::EventArgs^ e
 	else {
 		degree = degree * cof;
 		term = pow(term, degree);
-		result = logar(term1, base);
+		result = logar(term, base);
 		result = round(result * 10) / 10;
 		degree1 = degree1 * cof1;
 		term1 = pow(term1, degree1);
 		result1 = logar(term1, base1);
 		result1 = round(result1 * 10) / 10;
-
-		label15->Text = (round((result - result1) * 10) / 10).ToString();
+		label15->Text = "= ";
+		label15->Text += ToString()->Format("{0:0.##}", (result - result1));
 	}
 }
 private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1097,14 +1111,14 @@ private: System::Void button5_Click(System::Object^ sender, System::EventArgs^ e
 	else {
 		degree = degree * cof;
 		term = pow(term, degree);
-		result = logar(term1, base);
+		result = logar(term, base);
 		result = round(result * 10) / 10;
 		degree1 = degree1 * cof1;
 		term1 = pow(term1, degree1);
 		result1 = logar(term1, base1);
 		result1 = round(result1 * 10) / 10;
-
-		label15->Text = (round((result * result1) * 10) / 10).ToString();
+		label15->Text = "= ";
+		label15->Text +=  ToString()->Format("{0:0.##}", (result * result1));
 	}
 }
 private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1153,14 +1167,16 @@ private: System::Void button6_Click(System::Object^ sender, System::EventArgs^ e
 	else {
 		degree = degree * cof;
 		term = pow(term, degree);
-		result = logar(term1, base);
+		result = logar(term, base);
 		result = round(result * 10) / 10;
+
 		degree1 = degree1 * cof1;
 		term1 = pow(term1, degree1);
 		result1 = logar(term1, base1);
 		result1 = round(result1 * 10) / 10;
 
-		label15->Text = (round((result / result1) * 10) / 10).ToString();
+		label15->Text = "= ";
+		label15->Text +=ToString()->Format("{0:0.##}", (result / result1));
 	}
 }
 private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e) {
@@ -1168,7 +1184,7 @@ private: System::Void label15_Click(System::Object^ sender, System::EventArgs^ e
 private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 	
 	
-		MessageBox::Show("exp = 2,71 \nдробное число записывается через ',' ", "Подсказка",
+		MessageBox::Show("exp = 2,7 \nдробное число записывается через ',' ", "Подсказка",
 			MessageBoxButtons::OK, MessageBoxIcon::Information);
 
 }
