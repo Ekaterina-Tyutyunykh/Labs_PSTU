@@ -111,11 +111,6 @@ int* Kommivoyazher(int count, int **matrix) {
         matrix_solution[mj][mi] = nullptr;
 
 
-
-
-
-
-
         for (int i = 0; i < size; i++) {
             matrix[i][i] = 0;
         }

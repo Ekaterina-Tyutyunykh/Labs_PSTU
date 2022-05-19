@@ -6,7 +6,7 @@
 #include <math.h>
 #include <iostream>
 #include "class_graph.h"
-#include <glut.h>
+//#include <glut.h>
 #include <stdio.h>
 #include <sstream>
 
