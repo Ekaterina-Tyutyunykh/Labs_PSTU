@@ -574,6 +574,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
       INT16 count = System::Int16::Parse(this->textBox1->Text);
       if (count >= 1 && count < 11) {
 
+      //scene render
       UNREFERENCED_PARAMETER(sender);
       UNREFERENCED_PARAMETER(e);
       OpenGL->get_data(&test);
@@ -597,7 +598,8 @@ private: System::Windows::Forms::TextBox^ textBox2;
                       matrix[i][j] = 0;
                   }
               }
-
+              
+              //numbering and arrangement vertex
               for (int i = 1; i <= count; ++i) {
                   x1 = (r * cos((float)i * 6.28 / (float)count));
                   y1 = (r * sin((float)i * 6.28 / (float)count));
@@ -711,6 +713,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
   private: System::Void textBox1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 
+      //change count of vertex
       if (textBox1->Text != "") {
           INT16 count = System::Int16::Parse(this->textBox1->Text);
           if (count >= 1 && count < 11) {
@@ -751,9 +754,12 @@ private: System::Windows::Forms::TextBox^ textBox2;
         int c1 = System::Int16::Parse(this->textBox2->Text);
         int c2 = System::Int16::Parse(this->textBox3->Text);
         int weight = System::Int16::Parse(this->textBox4->Text);
-               
+
+        //add track and cout information       
         if (c1 < count && c2 < count) {
             test.add_track(c1, c2, weight);
+
+            //adjacency matrix filling
             matrix[c1][c2] = weight;
             counter++;
             label1->Text += c1.ToString();
@@ -765,7 +771,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             if (counter%4==0) {
                 label1->Text += "\n";
             }
-
+            //scene render
             OpenGL->get_data(&test);
             OpenGL->Render();
             OpenGL->SwapOpenGLBuffers();
@@ -796,6 +802,7 @@ private: System::Windows::Forms::TextBox^ textBox2;
             label5->Text += i.ToString();
             label5->Text += "    ";
             for (int j = 0; j < count; j++) {
+                //cout adjacency matrix
                 label5->Text += matrix[i][j].ToString();
                 label5->Text += "    ";
             }
@@ -814,13 +821,14 @@ private: System::Windows::Forms::TextBox^ textBox2;
 
     INT16 count = System::Int16::Parse(this->textBox1->Text);
     int* sol = new int[count];
+    //solution Kommivoyazher
     sol = Kommivoyazher(count, matrix);
 
     int j = 0;
     label17->Text = "Отрезки";
     label17->Text += "\n";
     int sum = 0;
-
+    //cout result
     for (int i = 0; i < count; i++) {
 
         j = solution[i];

@@ -1,17 +1,16 @@
 #pragma once
-//#include "string";
-//#include "Form1.h"
+
 #include"class_graph.h"
 
 int** matrix_temp;
 int* solution;
 int*** matrix_solution;
-//string str = "";
 
 
 
 
-int* Kommivoyazher(/*int*** matrix_solution, int** matrix_temp, int* solution,*/int count, int **matrix) {
+
+int* Kommivoyazher(int count, int **matrix) {
 
     int size = count;
 
@@ -28,7 +27,6 @@ int* Kommivoyazher(/*int*** matrix_solution, int** matrix_temp, int* solution,*/
 
 
 
-
     for (int i = 0; i <= size; i++)
     {
         matrix_temp[i] = new int[size];
@@ -41,7 +39,7 @@ int* Kommivoyazher(/*int*** matrix_solution, int** matrix_temp, int* solution,*/
         {
             if (matrix[i][j] == 0) {
                 matrix_solution[i][j] = nullptr;
-               // continue;
+
             }
             matrix_solution[i][j] = new int(matrix[i][j]);
         }
@@ -126,31 +124,5 @@ int* Kommivoyazher(/*int*** matrix_solution, int** matrix_temp, int* solution,*/
 
     }
     return solution;
-    //cout << "Отрезки пути ";
-   // int s = 0;
-   // for (int i = 0, j = 0; i < size; i++)
-   // {
-   //     j = solution[i];
-   //     //cout << i + 1 << " -> " << j + 1 << '\t';
-   //     s += matrix[i][j];
-   // }
-   //// cout << endl;
-   // //cout << "Кратчайший путь  ";
-   // int temp = 0;
-   // for (int l = 0; l < size;)
-   // {
-   //     for (int i = 0, j = 0; i < size; i++)
-   //     {
-   //         if (temp == 0 || i + 1 == temp)
-   //         {
-   //             //if (temp == 0) cout << i + 1;
-   //             j = solution[i];
-   //             temp = j + 1;
-   //             //if (temp > 0)	cout << " -> " << temp;
-   //             l++;
-   //         }
-   //     }
-   // }
-    //cout << "Путь  " << s;
-    //cout << endl;
+   
 }
