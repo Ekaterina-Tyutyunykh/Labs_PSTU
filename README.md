@@ -5,7 +5,7 @@
 Запуск решения - ``Calculator\Calculator\Calculator.sln``  
 Файл exe - ``Calculator\Calculator\Debug\Calculator.exe``  
 Исходные файлы - ``Calculator\Calculator\Calculator\``  
-2. Граф - OpenGL_on_a_Windows_Form, выполнен на VS2019.  
-Запуск решения - ``OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form.sln``  
-Файл exe - ``OpenGL_on_a_Windows_Form\Debug\OpenGL_on_a_Windows_Form.exe``  
-Исходные файлы - ``OpenGL_on_a_Windows_Form\OpenGL_on_a_Windows_Form\``
+2. Граф - Graph, выполнен на VS2019.  
+Запуск решения - ``Graph\OpenGL_on_a_Windows_Form.sln``  
+Файл exe - ``Graph\Debug\OpenGL_on_a_Windows_Form.exe``  
+Исходные файлы - ``Graph\OpenGL_on_a_Windows_Form\``
