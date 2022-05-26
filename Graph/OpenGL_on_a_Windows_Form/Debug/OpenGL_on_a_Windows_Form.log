@@ -1,0 +1,23 @@
+﻿cl : командная строка warning D9035: использование параметра "clr:pure" нежелательно, он будет удален в следующих выпусках
+  stdafx.cpp
+cl : командная строка warning D9035: использование параметра "clr:pure" нежелательно, он будет удален в следующих выпусках
+  AssemblyInfo.cpp
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\AssemblyInfo.cpp(40,29): warning C4947: System::Security::Permissions::SecurityAction::RequestMinimum: помечен как устаревший
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\AssemblyInfo.cpp(40,29): message : Сообщение: "Assembly level declarative security is obsolete and is no longer enforced by the CLR by default. See http://go.microsoft.com/fwlink/?LinkID=155570 for more information."
+  OpenGL_on_a_Windows_Form.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\include\yvals.h(245): warning STL4001: /clr:pure is deprecated and will be REMOVED.
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(56,1): warning C4305: аргумент: усечение из "double" в "GLclampf"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(61,1): warning C4305: инициализация: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(63,1): warning C4305: инициализация: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(85,1): warning C4305: аргумент: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(101,30): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(105,1): warning C4305: аргумент: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(107,1): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\OpenGL.h(120,1): warning C4305: инициализация: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\Form1.h(604,27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\OpenGL_on_a_Windows_Form\Form1.h(605,27): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+  Создание кода...
+cl : командная строка warning D9035: использование параметра "clr:pure" нежелательно, он будет удален в следующих выпусках
+  .NETFramework,Version=v4.0.AssemblyAttributes.cpp
+  AssemblyInfo.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  OpenGL_on_a_Windows_Form.vcxproj -> C:\Users\User\Documents\Labs_PSTU\Labs_PSTU\Graph\Debug\OpenGL_on_a_Windows_Form.exe
